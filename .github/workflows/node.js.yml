@@ -24,6 +24,8 @@ jobs:
       path: public/
     needs: build
   test:
+    needs: build
+    runs-on: ubuntu-latest
       - uses: actions/upload-artifact@master
         with:
           name: webpack artifacts
